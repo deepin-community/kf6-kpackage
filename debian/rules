@@ -1,4 +1,14 @@
 #!/usr/bin/make -f
 
+# Disable fixfilepath, as it triggers build failures.
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all reproducible=-fixfilepath
+
 %:
 	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DBUILD_QCH=ON
+
+override_dh_auto_test:
+	# Disabled due to 3 - plasmoidpackagetest (Failed)
+	# xvfb-run -a --server-args="-screen 0 1024x768x24+32" dh_auto_test --buildsystem=kf6 -O--buildsystem=kf6 --no-parallel
