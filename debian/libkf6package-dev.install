@@ -1,0 +1,3 @@
+usr/include/KF6/KPackage/
+usr/lib/*/cmake/KF6Package/
+usr/lib/*/libKF6Package.so

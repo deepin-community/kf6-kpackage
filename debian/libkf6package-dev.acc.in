@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<descriptor>
+
+<version>
+    6.0.0
+</version>
+
+<headers>
+    /usr/include/KF6/KPackage/
+</headers>
+
+<libs>
+    /usr/lib/@@DEB_HOST_MULTIARCH@@/libKF6Package.so
+</libs>
+
+<gcc_options>
+    -fPIC
+    -std=gnu++17
+</gcc_options>
+
+</descriptor>
